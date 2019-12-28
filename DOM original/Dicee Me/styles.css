@@ -1,0 +1,27 @@
+.container {
+  text-align: center;
+
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+}
+
+body {
+  background-color: gray;
+}
+
+h1 {
+  font-size: 5em;
+  font-family: fantasy;
+  color: cyan;
+}
+
+h3 {
+  color: cyan;
+}
+
+h4 {
+  color: white;
+}
