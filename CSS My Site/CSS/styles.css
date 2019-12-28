@@ -1,0 +1,156 @@
+
+body {
+  margin: 0px;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  color: #40514E
+}
+
+h1 {
+  font-size: 5.625rem;   /* 100% equivale a 16px, si quires 90px haz 90/16 = 562% o 16px = 100% = 1em.  rem no hereda tamanos del parent */
+  margin: 50px auto 0 auto;
+  font-family: 'Sacramento', cursive;
+  color:#66BFBF;
+  /*line-height: 2;   Single value without units */
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem; /* 40px, o sea 40/16 = 2.5 */
+  color:#66BFBF;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color:#11999E;
+}
+
+a {
+  color:#11999E;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  text-decoration:none;
+}
+
+a:hover {
+  color:#Eaf6f6;
+}
+
+hr {
+  border: dotted #EAF6F6 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
+}
+
+p {
+  line-height: 2;
+}
+/*
+hr {
+border: 0;
+height: 25px;
+background-image: url(Images/type_3.png);
+background-repeat: no-repeat;
+}
+*/
+.top-container {
+  background-color: #b4e9e2;
+  position: relative;
+  padding-top:50px;
+}
+
+.middle-container {
+  margin: 100px 0;
+}
+
+.bottom-container {
+  background-color: #66BFBF;
+  margin-top: 100px;
+  padding: 50px 0 20px;
+  line-height: 2.5;
+}
+
+.top-cloud {
+  position:absolute;
+  right: 300px;
+  top: 40px;
+}
+
+.bottom-cloud {
+  position:absolute;
+  left: 250px;
+  bottom:300px;
+}
+
+.intro {
+  width:30%;
+  margin:auto;
+}
+
+.skill-row {
+  width:50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+}
+
+.contact-message{
+  width:40%;
+  margin: 40px auto 60px;
+}
+
+.mario {
+  margin-top: 30px;
+  width: 200px;
+  height: 200px;
+}
+
+.spaceinvaders {
+  width: 25%;
+  float: left;
+  margin-right: 10px;
+}
+
+.pacman {
+  width: 25%;
+  float:right;
+  margin-left:10px;
+}
+
+.PacmanChallengeText{
+  /* clear: right;   Clear is the anti float, le dice to ignorar el float y que no haya nada en el margin derecho en este caso */
+}
+
+.copyright {
+  font-size: .75rem;
+  color: #EAF6F6;
+  padding: 20px 0;
+}
+
+.butn {
+  background: #66BFBF;
+  background-image: -webkit-linear-gradient(top, #11cdd4, #11999E);
+  background-image: -moz-linear-gradient(top, #11cdd4, #11999E);
+  background-image: -ms-linear-gradient(top, #11cdd4, #11999E);
+  background-image: -o-linear-gradient(top, #11cdd4, #11999E);
+  background-image: linear-gradient(to bottom, #11cdd4, #11999E);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.butn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
