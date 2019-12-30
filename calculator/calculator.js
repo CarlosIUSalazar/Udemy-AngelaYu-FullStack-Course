@@ -17,6 +17,22 @@ app.post("/", function(req,res){
     res.send("Teh result of the calculation is " + result)
 });
 
+////
+
+app.get("/bmicalculator", function(req,res){
+    res.sendFile(__dirname + "/bmiCalculator.html");
+});
+
+app.post("/bmicalculator", function(req,res){
+
+    let weight = parseFloat(req.body.weight);  //use parseFloat instead of Number to make it decimal
+    let height = parseFloat(req.body.height);
+    let bmiResult = weight/((height/100)**2);
+    res.send("Your BMI is: " + bmiResult);
+})
+
+
 app.listen(3000, function(){
     console.log("Server is running on port 3000");
 });
+
