@@ -14,14 +14,19 @@ app.get("/", function(req,res){
 app.post("/", function(req,res){
 
     //console.log(req.body.crypto);
+    let crypto = req.body.crypto;
+    let fiat = req.body.fiat;
 
-    request("https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD", function(error,response,body){
+    let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/";
+    let finalURL = baseURL + crypto + fiat;
+
+    request(finalURL, function(error,response,body){
         
         let data = JSON.parse(body);
         let price = data.last;  //last is the name of the key value we are looking for (latest value of btc)
         console.log(price);
         
-        res.send("<h1> The current price of Bitcoin is " + price + " USD</h1>")
+    res.send("<h1>The current price of " + crypto + " is " + price + fiat + "</h1>");
         
         //console.log(response);  //Brings a lot of data
         //console.log(response.statusCode);  //Retruns 200 which means request was successful. Check other HTTP Status Codes here: https://httpstatuses.com
