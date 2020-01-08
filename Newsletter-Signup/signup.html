@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
+
+    <title>Newsletter Signup</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <form action="/" class="form-signin" method="POST"> <!-- have to specify action "/" where we are gonna send our post method which we have to specify too as method POST -->
+      <img class="mb-4" src="images/link.jpg" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Signup to my Newsletter</h1>
+
+      <input type="text" name="fName" class="form-control top" placeholder="First Name" required autofocus>
+      <input type="text" name="lName" class="form-control middle" placeholder="Last Name" required>
+      <input type="email" name="email" class="form-control bottom" placeholder="Email" required>
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Me Up!</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 255Rupees 2020</p>
+    </form>
+  </body>
+</html>
