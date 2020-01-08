@@ -16,20 +16,28 @@ app.post("/", function(req,res){
     //console.log(req.body.crypto);
     let crypto = req.body.crypto;
     let fiat = req.body.fiat;
+    var amount = req.body.amount;
 
-    let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/";
-    let finalURL = baseURL + crypto + fiat;
+    let options = {
+        url: "https://apiv2.bitcoinaverage.com/convert/global",
+        method: "GET",
+        qs: {
+            from: crypto,
+            to: fiat,
+            amount: amount,
+        }
+    }
 
-    request(finalURL, function(error,response,body){
+    request(options, function(error,response,body){
         
         let data = JSON.parse(body);
-        let price = data.last;  //last is the name of the key value we are looking for (latest value of btc)
-        var currentDate = data.display_timestamp;
-        console.log(price);
+        let price = data.price;  //price is the name of the key value we are looking for
+        console.log(price)
+        var currentDate = data.time;
 
     res.write("<p>The current date is " + currentDate +"</p>");
 
-    res.write("<h1>The current price of " + crypto + " is " + price + fiat + "</h1>");
+    res.write("<h1>" + amount + crypto + " is currently worth " + price + fiat + "</h1>");
         
     res.send();
         
