@@ -19,10 +19,30 @@ app.post("/", function(req,res){
     let email = req.body.email;
 
     console.log(firstName, lastName, email)
-})
+
+    let options = {
+        url: "https://us4.api.mailchimp.com/3.0/lists/a68553c2ec",
+        method: "POST",
+
+    }
+
+    request(options,function(error, response, body){
+        if (error) {
+            console.log(error);
+        } else {
+            console.log(response.statusCode);
+        }
+    });
+
+});
 
 
 
 app.listen(3000, function(){
     console.log("Server is running on port 3000.")
 });
+
+// API Key
+//46b377147b4fd3c0fc854ee372077565-us4
+// List ID
+//a68553c2ec
