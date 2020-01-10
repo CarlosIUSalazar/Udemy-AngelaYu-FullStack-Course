@@ -1,24 +1,7 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
+<%- include("header") -%>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>To Do List</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-
-<body>
-
-    <div class="box" id="heading">
-        <h1> <%= kindOfDay %> </h1>
+<div class="box" id="heading">
+        <h1> <%= listTitle %> </h1>
 
     </div>
 
@@ -37,13 +20,10 @@
         <form class="item" action="/" method="post">
 
             <input type="text" name="newItem" placeholder="New Item" autocomplete="off"> <!-- Autocomplete off removes the suggestions when in the new item space -->
-            <button type="submit" name="button">+ </button>
+            <button type="submit" name="list" value=<%= listTitle %>> + </button>
     
         </form>
 
     </div>
 
-
-</body>
-
-</html>
+    <%- include("footer") -%>
