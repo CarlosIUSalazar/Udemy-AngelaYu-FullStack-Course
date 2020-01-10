@@ -9,7 +9,7 @@ let items = ["Buy food", "Cook food", "Eat food"];
 app.set("view engine", "ejs");  //place this line below const app = express();
 
 app.use(bodyParser.urlencoded({extended:true}));
-
+app.use(express.static("public")); //This tells express to serve the static files in folder public and it's a necessary step.
 
 app.get("/", function (req, res) {
 

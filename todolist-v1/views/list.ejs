@@ -2,35 +2,48 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>To Do List</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To Do List</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
 
+<body>
+
+    <div class="box" id="heading">
         <h1> <%= kindOfDay %> </h1>
 
-        <ul>
+    </div>
 
-            <% for (let i = 0; i<newListItems.length; i++) { %>
-                <li> <%= newListItems[i] %> </li>
-            <% } %>
 
-        </ul>
+    <div class="box">
 
-        <form class="" action="/" method="post">
-        
-            <input type="text" name="newItem">
+        <% for (let i = 0; i<newListItems.length; i++) { %>
 
-            <button type="submit" name="button">Add</button>
+        <div class="item">
+            <input type="checkbox">
+            <p><%= newListItems[i] %> </p>
+        </div>
 
+        <% } %>
+
+        <form class="item" action="/" method="post">
+
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off"> <!-- Autocomplete off removes the suggestions when in the new item space -->
+            <button type="submit" name="button">+ </button>
+    
         </form>
 
-    </body>
+    </div>
+
+
+</body>
+
 </html>
