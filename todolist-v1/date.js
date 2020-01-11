@@ -27,7 +27,6 @@ exports.getDate = function() {
 //     return day;
 // };
 
-
 module.exports.getDay = getDay;  //No parenthesis otherwise you call the function
 
 function getDay() {

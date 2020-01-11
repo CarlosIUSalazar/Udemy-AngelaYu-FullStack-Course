@@ -2,8 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js");
 
-const app = express();
-//https://github.com/mde/ejs/wiki/Using-EJS-with-Express
+const app = express(); //https://github.com/mde/ejs/wiki/Using-EJS-with-Express
 
 let items = ["Buy food", "Cook food", "Eat food"];
 let workItems = [];
@@ -17,10 +16,10 @@ app.get("/", function (req, res) {
 
 let day = date.getDate();  //date() is being exported from date.js file the getDate function and not getDay function
 
-    res.render("list", { 
+    res.render("list", { //is gonna look for folder views and file list.ejs 
         listTitle: day,
         newListItems: items 
-    });    //is gonna look for folder views and file list.ejs
+    });    
 });
 
 app.post("/", function(req,res){
