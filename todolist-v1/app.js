@@ -1,17 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js");
-
 const app = express(); //https://github.com/mde/ejs/wiki/Using-EJS-with-Express
 
 let items = ["Buy food", "Cook food", "Eat food"];
 let workItems = [];
 
 app.set("view engine", "ejs");  //place this line below const app = express();
-
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public")); //This tells express to serve the static files in folder public and it's a necessary step.
-
 app.get("/", function (req, res) {
 
 let day = date.getDate();  //date() is being exported from date.js file the getDate function and not getDay function
