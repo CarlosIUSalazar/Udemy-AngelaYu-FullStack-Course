@@ -12,7 +12,6 @@ exports.getDate = function() {
     let day = today.toLocaleDateString("en-US", options);
     return day;
 };
-
 // OROGINAL ABOVE FUNCTION BEFORE REFACTORING IT INTO A VARIABLE FUNCTION
 // function getDate() {
 //     let today = new Date();
@@ -28,7 +27,6 @@ exports.getDate = function() {
 // };
 
 module.exports.getDay = getDay;  //No parenthesis otherwise you call the function
-
 function getDay() {
     const today = new Date();
     // let currentDay = today.getDay();
