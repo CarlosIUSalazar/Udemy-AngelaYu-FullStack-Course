@@ -5,8 +5,6 @@ var userClickedPattern = [];
 var gamePattern = [];
 var buttonColours = ["red","blue","green","yellow"];
 
-
-
 $(document).keypress(function(){
   if (started == false) {
     $("h1").text("Level "+level);
